@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  es-client:
+    container_name: es-client
+    build: .
+    volumes:
+      - ./out:/out
+      - ./logs:/logs
+    env_file:
+      - client.env
+    command: tail -f
