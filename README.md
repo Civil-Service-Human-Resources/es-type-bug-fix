@@ -6,6 +6,7 @@ Firstly, create a `client.env` file which contains the host, username and passwo
 
 ```properties
 ES_HOST=<host>
+# The host URL must include protocol and port. For example http://localhost:9200
 ES_USERNAME=<username>
 ES_PASSWORD=<password>
 ```
@@ -35,7 +36,9 @@ python main.py plan
 
 ### Apply update
 
+```sh
 python main.py plan
+```
 
 ## Track logs
 
