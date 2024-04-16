@@ -31,13 +31,25 @@ The following are to be run within the client container:
 ### Plan update
 
 ```sh
-python main.py plan
+es-client plan
 ```
 
 ### Apply update
 
 ```sh
-python main.py plan
+es-client apply
+```
+
+### Plan revert
+
+```sh
+es-client revert-plan
+```
+
+### Apply revert
+
+```sh
+es-client revert-apply
 ```
 
 ## Track logs
