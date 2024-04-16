@@ -9,4 +9,4 @@ services:
       - ./logs:/logs
     env_file:
       - client.env
-    command: tail -f /logs/app.log
+    command: tail -f
