@@ -1,6 +1,6 @@
 # ElasticSearch module type fix tool
 
-## Install and run container
+## Install and prepare environment
 
 Firstly, create a `client.env` file which contains the host, username and password for your ElasticSearch database:
 
@@ -18,7 +18,9 @@ docker-compose build
 docker-compose up -d
 ```
 
-## Run tool inside container
+## Update ElasticSearch database
+
+### 1. Get inside the Docker container
 
 To enter the client container, run this command:
 
@@ -28,25 +30,33 @@ docker-compose exec es-client bash
 
 The following are to be run within the client container:
 
-### Plan update
+### 2. Plan
 
 ```sh
 es-client plan
 ```
 
-### Apply update
+This will create a `plan.json` file:
+
+### 3. Apply
+
+Using the `plan.json` file, this command will apply the updates to the specified ElasticSearch database:
 
 ```sh
 es-client apply
 ```
 
-### Plan revert
+## Revent updates
+
+Using the `plan.json` file, this command will create a new plan, `revert-plan.json` to revert the changes made:
 
 ```sh
 es-client revert-plan
 ```
 
 ### Apply revert
+
+This command will use `revert-plan.json` to apply the reversion:
 
 ```sh
 es-client revert-apply
