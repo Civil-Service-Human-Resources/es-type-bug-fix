@@ -18,7 +18,7 @@ docker-compose build
 docker-compose up -d
 ```
 
-## Update ElasticSearch database
+## Update module types in ElasticSearch database
 
 ### 1. Get inside the Docker container
 
