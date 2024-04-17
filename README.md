@@ -64,7 +64,7 @@ es-client revert-apply
 
 ## Track logs
 
-The logs are contained in `logs/app.log`.
+The logs are located in `logs/app.log`.
 
 Use this command in a new tab (outside the container) to track logs live:
 
