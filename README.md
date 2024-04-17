@@ -46,7 +46,7 @@ Using the `plan.json` file, this command will apply the updates to the specified
 es-client apply
 ```
 
-## Revent updates
+## Revert updates
 
 Using the `plan.json` file, this command will create a new plan, `revert-plan.json` to revert the changes made:
 
